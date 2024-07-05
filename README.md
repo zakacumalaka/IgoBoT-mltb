@@ -801,6 +801,7 @@ separated by a new line.
 
 [Buy anasty17 A Coffee!](https://ko-fi.com/anasty17)
 <br>
+<br>
 [Spend some money for me :)](https://saweria.co/zxhcarkecor)
 <br>
 <br>
