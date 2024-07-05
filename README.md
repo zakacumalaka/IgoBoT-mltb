@@ -800,9 +800,11 @@ separated by a new line.
 <p> If you feel like showing your appreciation for this project, then how about buying me a coffee.</p>
 
 [Buy anasty17 A Coffee!](https://ko-fi.com/anasty17)
+<br>
 [Spend some money for me :)](https://saweria.co/zxhcarkecor)
-
-### Anasty17 Wallet
+<br>
+<br>
+## Anasty17 Wallet
 
 Binance ID:
 
