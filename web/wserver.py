@@ -639,7 +639,7 @@ section span{
           src="https://telegra.ph/file/43af672249c94053356c7.jpg"
           alt="logo"
         />
-        <a href="https://t.me/anas_tayyar">
+        <a href="https://t.me/ZxhCarkecor">
           <h2 class="name">Bittorrent Selection</h2>
         </a>
       </div>
