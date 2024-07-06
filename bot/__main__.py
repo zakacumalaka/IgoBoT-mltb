@@ -95,19 +95,21 @@ async def stats(_, message):
 
 async def start(client, message):
     buttons = ButtonMaker()
-    buttons.ubutton("Repo", "https://www.github.com/anasty17/mirror-leech-telegram-bot")
-    buttons.ubutton("Owner", "https://t.me/anas_tayyar")
+    buttons.ubutton("Repo", "https://github.com/zakacumalaka/IgoBoT-mltb")
+    buttons.ubutton("Owner", "https://t.me/ZxhCarkecor")
+    buttons.ubutton("Use Me At", "https://t.me/an_other_stuff")
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(client, message):
         start_string = f"""
-This bot can mirror all your links|files|torrents to Google Drive or any rclone cloud or to telegram.
+Bot Started.
+Join @another_stuff to use this bot.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
         await sendMessage(message, start_string, reply_markup)
     else:
         await sendMessage(
             message,
-            "You Are not authorized user! Deploy your own mirror-leech bot",
+            "You Are not authorized user! Join @an_other_stuff and tag admin for auth",
             reply_markup,
         )
 
