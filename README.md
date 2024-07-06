@@ -258,7 +258,7 @@ quotes, even if it's `Int`, `Bool` or `List`.
   value|key:value. Add `^` before integer or float, some numbers must be numeric and some string. `str`
     - Example: "format:bv*+mergeall[vcodec=none]|nocheckcertificate:True"
 - `USE_SERVICE_ACCOUNTS`: Whether to use Service Accounts or not, with google-api-python-client. For this to work
-  see [Using Service Accounts](https://github.com/ctrhyz/IgoBoT-mltb#generate-service-accounts-what-is-service-account)
+  see [Using Service Accounts](https://github.com/ctrhyz/IgoBoT-mltb#1-generate-service-accounts-what-is-service-account)
   section below. Default is `False`. `Bool`
 - `NAME_SUBSTITUTE`: Add word/letter/sentense/pattern to remove or replace with other words with sensitive case or without.**Notes**: 
   1. Seed will get disbaled while using this option
