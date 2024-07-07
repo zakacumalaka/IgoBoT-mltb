@@ -252,7 +252,7 @@ function s_validate() {
         </a>
       </div>
       <div class="social">
-        <a href="https://github.com/zakacumalaka/IgoBoT-mltb"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/ctrhyz/IgoBoT-mltb"><i class="fab fa-github"></i></a>
         <a href="https://t.me/ZxhCarkecor"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -644,7 +644,7 @@ section span{
         </a>
       </div>
       <div class="social">
-        <a href="https://github.com/zakacumalaka/IgoBoT-mltb"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/ctrhyz/IgoBoT-mltb"><i class="fab fa-github"></i></a>
         <a href="https://t.me/ZxhCarkecor"><i class="fab fa-telegram"></i></a>
       </div>
     </header>
@@ -819,7 +819,7 @@ def set_priority(id_):
 
 @app.route("/")
 def homepage():
-    return "<h1>See IgoBot-mltb in <a href='https://github.com/zakacumalaka/IgoBoT-mltb'>GitHub</a> By <a href='https://t.me/ZxhCarkecor'>@ZxhCarkecor</a></h1>"
+    return "<h1>See IgoBot-mltb in <a href='https://github.com/ctrhyz/IgoBoT-mltb'>GitHub</a> By <a href='https://t.me/ZxhCarkecor'>@ZxhCarkecor</a></h1>"
 
 
 @app.errorhandler(Exception)

@@ -95,7 +95,7 @@ async def stats(_, message):
 
 async def start(client, message):
     buttons = ButtonMaker()
-    buttons.ubutton("Repo", "https://github.com/zakacumalaka/IgoBoT-mltb")
+    buttons.ubutton("Repo", "https://github.com/ctrhyz/IgoBoT-mltb")
     buttons.ubutton("Owner", "https://t.me/ZxhCarkecor")
     buttons.ubutton("Use Me At", "https://t.me/an_other_stuff")
     reply_markup = buttons.build_menu(2)
