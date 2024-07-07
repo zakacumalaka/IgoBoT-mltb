@@ -109,7 +109,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
     else:
         await sendMessage(
             message,
-            "You Are not authorized user! Join @an_other_stuff and tag admin for auth",
+            "You Are not authorized user! Join @another_stuff and tag admin for auth",
             reply_markup,
         )
 
