@@ -102,15 +102,14 @@ async def start(client, message):
     if await CustomFilters.authorized(client, message):
         start_string = f"""
 Bot Started.
-Join @another_stuff to use this bot.
+Gateway @another_stuff.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
         await sendMessage(message, start_string, reply_markup)
     else:
         await sendMessage(
             message,
-            "You Are not authorized user! Join @another_stuff and tag admin for auth",
-            reply_markup,
+            f"Use me at @an_other_stuff\nGateway @another_stuff",
         )
 
 
