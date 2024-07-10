@@ -101,7 +101,6 @@ async def start(client, message):
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(client, message):
         start_string = f"""
-Bot Started.
 Gateway @another_stuff.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
