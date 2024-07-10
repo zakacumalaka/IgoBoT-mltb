@@ -104,7 +104,7 @@ async def start(client, message):
 Gateway @another_stuff.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 """
-        await sendMessage(message, start_string, reply_markup)
+        await sendMessage(message, start_string)
     else:
         await sendMessage(
             message,
