@@ -27,6 +27,11 @@ from bot import (
     scheduler,
     sabnzbd_client,
 )
+import config
+from handlers.broadcast import broadcast
+from handlers.check_user import handle_user_status
+from handlers.database import Database
+from pyrogram import StopPropagation, filters
 from .helper.ext_utils.bot_utils import cmd_exec, sync_to_async, create_help_buttons
 from .helper.ext_utils.db_handler import DbManager
 from .helper.ext_utils.files_utils import clean_all, exit_clean_up
@@ -34,6 +39,7 @@ from .helper.ext_utils.jdownloader_booter import jdownloader
 from .helper.ext_utils.status_utils import get_readable_file_size, get_readable_time
 from .helper.ext_utils.telegraph_helper import telegraph
 from .helper.listeners.aria2_listener import start_aria2_listener
+from pyrogram import Client
 from .helper.mirror_leech_utils.rclone_utils.serve import rclone_serve_booter
 from .helper.telegram_helper.bot_commands import BotCommands
 from .helper.telegram_helper.button_build import ButtonMaker
@@ -59,6 +65,37 @@ from .modules import (
     help,
     force_start,
 )
+
+LOG_CHANNELBR = config.LOG_CHANNEL
+AUTH_USERSBR = config.AUTH_USERS
+DB_URLBR = config.DB_URL
+DB_NAMEBR = config.DB_NAME
+
+db = Database(DB_URLBR, DB_NAMEBR)
+
+@bot.on_message(filters.private)
+async def _(bot, cmd):
+    await handle_user_status(bot, cmd)
+
+@bot.on_message(filters.private & filters.command("broadcast"))
+async def broadcast_handler_open(_, m):
+    if m.from_user.id not in AUTH_USERSBR:
+        await m.delete()
+        return
+    if m.reply_to_message is None:
+        await m.delete()
+    else:
+        await broadcast(m, db)
+
+@bot.on_message(filters.private & filters.command("stats"))
+async def sts(c, m):
+    if m.from_user.id not in AUTH_USERSBR:
+        await m.delete()
+        return
+    await m.reply_text(
+        text=f"**Total Users in Database 📂:** `{await db.total_users_count()}`\n\n**Total Users with Notification Enabled 🔔 :** `{await db.total_notif_users_count()}`",
+        quote=True
+    )
 
 
 async def stats(_, message):
@@ -96,19 +133,22 @@ async def stats(_, message):
 async def start(client, message):
     buttons = ButtonMaker()
     buttons.ubutton("Repo", "https://github.com/ctrhyz/IgoBoT-mltb")
-    buttons.ubutton("Owner", "https://t.me/ZxhCarkecor")
-#    buttons.ubutton("Use Me At", "https://t.me/an_other_stuff")
+    buttons.ubutton("Admin", "https://t.me/IgoPalevi")
+    buttons.ubutton("Donate", "https://saweria.co/zxhcarkecor")
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(client, message):
         start_string = f"""
-Gateway @another_stuff.
+Bot Started!.
 Type /{BotCommands.HelpCommand} to get a list of available commands
+
+__This bot made with ❤️ by @ZxhCarkecor__
 """
         await sendMessage(message, start_string, reply_markup)
     else:
         await sendMessage(
             message,
-            f"Use me at @an_other_stuff\nGateway @another_stuff",
+            f"Use me in group.\nAsk the Admin to invite you to the group.\n\n__This bot made with ❤️ by @ZxhCarkecor__",
+            reply_markup,
         )
 
 
@@ -294,6 +334,7 @@ async def main():
     LOGGER.info("Bot Started!")
     signal(SIGINT, exit_clean_up)
 
-
 bot.loop.run_until_complete(main())
 bot.loop.run_forever()
+
+
