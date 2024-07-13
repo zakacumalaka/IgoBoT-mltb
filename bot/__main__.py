@@ -141,13 +141,13 @@ async def start(client, message):
 Bot Started!.
 Type /{BotCommands.HelpCommand} to get a list of available commands
 
-__This bot made with ❤️ by @ZxhCarkecor__
+<i>This bot made with ❤️ by @ZxhCarkecor</i>
 """
         await sendMessage(message, start_string, reply_markup)
     else:
         await sendMessage(
             message,
-            f"Use me in group.\nAsk the Admin to invite you to the group.\n\n__This bot made with ❤️ by @ZxhCarkecor__",
+            f"Use me in group.\nAsk the Admin to invite you to the group.\n\n<i>This bot made with ❤️ by @ZxhCarkecor</i>",
             reply_markup,
         )
 
