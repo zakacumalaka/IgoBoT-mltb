@@ -138,7 +138,7 @@ async def start(client, message):
     reply_markup = buttons.build_menu(2)
     if await CustomFilters.authorized(client, message):
         start_string = f"""
-Bot Started!.
+Bot Started!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 
 <i>This bot made with ❤️ by @ZxhCarkecor</i>
