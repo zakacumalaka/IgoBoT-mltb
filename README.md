@@ -209,6 +209,7 @@ pip3 install -r requirements-cli.txt
 
 ```
 cp config_sample.env config.env
+cp config_sample.py config.py
 ```
 
 - Remove the first line saying:
