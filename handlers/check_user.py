@@ -23,7 +23,7 @@ async def handle_user_status(bot, cmd):
         if LOG_CHANNEL:
             await bot.send_message(
                 LOG_CHANNEL,
-                f"#NEWUSER: \n\nNew User [{cmd.from_user.first_name}](tg://user?id={cmd.from_user.id}) started @{BOT_USERNAME} !!",
+                f"#NEWUSER: \n\nNew User @{cmd.from_user.username} with ID={cmd.from_user.id} started @{BOT_USERNAME} !!",
             )
         else:
             logging.info(f"#NewUser :- Name : {cmd.from_user.first_name} ID : {cmd.from_user.id}")
