@@ -5,6 +5,10 @@ programming in Python.
 
 # Features
 
+## Broadcast
+
+- Adding Broadcast feature based on [BroadcastBot](https://github.com/NACBots/BroadcastBot)
+
 ## qBittorrent
 
 - External access to webui, so you can remove files or edit settings. Then you can sync settings in database with sync button in bsetting
@@ -224,6 +228,10 @@ quotes, even if it's `Int`, `Bool` or `List`.
   from <https://my.telegram.org>. `Int`
 - `TELEGRAM_HASH`: This is to authenticate your Telegram account for downloading Telegram files. You can get this
   from <https://my.telegram.org>. `Str`
+
+**Setting config.py**
+
+Well, it looks the same as below. Just follow like below
 
 **2. Optional Fields**
 
