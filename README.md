@@ -231,7 +231,8 @@ quotes, even if it's `Int`, `Bool` or `List`.
 
 **Setting config.py**
 
-Well, it looks the same as below. Just follow like below
+Well, it looks the same as above. Just follow like above. And maybe some like in below, just follow like above and below
+_idgaf_
 
 **2. Optional Fields**
 
