@@ -93,7 +93,7 @@ async def sts(c, m):
         await m.delete()
         return
     await m.reply_text(
-        text=f"**Total Users in Database 📂:** `{await db.total_users_count()}`\n\n**Total Users with Notification Enabled 🔔 :** `{await db.total_notif_users_count()}`",
+        text=(f"**Total Users in Database 📂:** `{await db.total_users_count()}`\n\n**Total Users with Notification Enabled 🔔 :** `{await db.total_notif_users_count()}`"),
         quote=True
     )
 
