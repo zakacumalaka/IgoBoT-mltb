@@ -147,7 +147,7 @@ Type /{BotCommands.HelpCommand} to get a list of available commands
     else:
         await sendMessage(
             message,
-            f"Use me in group.\nAsk the Admin to invite you to the group.\n\n<i>This bot made with ❤️ by @ZxhCarkecor</i>",
+            f"Use me in <a href="https://t.me/+b6HA172oJbpjOGM1">group</a>.\n\n<i>This bot made with ❤️ by @ZxhCarkecor</i>",
             reply_markup,
         )
 
