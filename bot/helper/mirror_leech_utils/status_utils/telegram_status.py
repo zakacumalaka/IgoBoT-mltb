@@ -45,7 +45,7 @@ class TelegramStatus:
             return "-"
 
     def gid(self):
-        return f"/c {self._gid}"
+        return self._gid
 
     def task(self):
         return self._obj
